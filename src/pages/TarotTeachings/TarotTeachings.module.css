@@ -1,0 +1,153 @@
+.page {
+  padding: 3rem 0;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.header {
+  max-width: 800px;
+}
+
+.kicker {
+  margin: 0 0 0.75rem;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(16, 185, 129, 0.25));
+  color: #22c55e;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25), inset 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  background: linear-gradient(135deg, #22c55e, #16a34a, #15803d, #10b981, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(34, 197, 94, 0.2);
+}
+
+.description {
+  margin: 1.25rem 0 0;
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: var(--card);
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: linear-gradient(
+    45deg,
+    transparent 10%,
+    rgba(255, 255, 255, 0.15) 40%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.15) 60%,
+    transparent 90%
+  );
+  animation: shimmer 2.5s infinite;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+  animation: wisdomGlow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+@keyframes wisdomGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(34, 197, 94, 0.2);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}
+
+.cardDesc {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.lessons {
+  font-size: 0.9rem;
+  color: var(--muted);
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22c55e, #16a34a, #10b981);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.cta:hover {
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.cta:active {
+  transform: scale(0.96);
+}

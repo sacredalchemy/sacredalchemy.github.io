@@ -1,0 +1,362 @@
+.productsPage {
+  padding: 3rem 0;
+  display: grid;
+  gap: 2.25rem;
+}
+
+.headerBlock {
+  max-width: 760px;
+  position: relative;
+}
+
+.headerBlock::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.kicker {
+  margin: 0 0 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.15));
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1.02;
+}
+
+.description {
+  margin: 1rem 0 0;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.noteCard {
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  background: var(--card);
+  border: 2px solid rgba(34, 197, 94, 0.25);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.12), inset 0 0 20px rgba(34, 197, 94, 0.05);
+}
+
+.noteCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.08) 0%, transparent 60%);
+  animation: noteShimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.noteCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes noteShimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.noteCard h2 {
+  margin-top: 0;
+}
+
+.noteCard ol {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--text);
+}
+
+.noteCard li {
+  margin-bottom: 0.75rem;
+}
+
+/* Tab Styles */
+.tabContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0;
+}
+
+.tab {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.tab:hover {
+  color: var(--accent);
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Filter Container */
+.filterContainer {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterBtn {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid rgba(124, 211, 252, 0.3);
+  background: rgba(124, 211, 252, 0.08);
+  color: var(--accent);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filterBtn:hover {
+  border-color: var(--accent);
+  background: rgba(124, 211, 252, 0.15);
+}
+
+.filterBtn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: 0 8px 20px rgba(124, 211, 252, 0.4);
+}
+
+/* Services Grid */
+.servicesGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin: 2rem 0;
+}
+
+.serviceCard {
+  padding: 2rem;
+  border-radius: 1.75rem;
+  background: var(--card);
+  border: 2px solid rgba(124, 211, 252, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 30px rgba(124, 211, 252, 0.1);
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: linear-gradient(
+    45deg,
+    transparent 10%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.1) 60%,
+    transparent 90%
+  );
+  animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(124, 211, 252, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(124, 211, 252, 0.2);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.cardDesc {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(124, 211, 252, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  background: rgba(124, 211, 252, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+}
+
+.ctaService {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7dd3fc 0%, #06b6d4 100%);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(124, 211, 252, 0.3);
+}
+
+.ctaService:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 211, 252, 0.5);
+}
+
+.ctaService:active {
+  transform: scale(0.96);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* Light Theme */
+:global(.light-theme) .tab.active {
+  color: #0ea5b7;
+  border-bottom-color: #0ea5b7;
+}
+
+:global(.light-theme) .filterBtn.active {
+  background: #0ea5b7;
+  border-color: #0ea5b7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabContainer {
+    gap: 0.5rem;
+  }
+
+  .tab {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterButtons {
+    gap: 0.5rem;
+  }
+
+  .filterBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ctaService {
+    width: 100%;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+}
