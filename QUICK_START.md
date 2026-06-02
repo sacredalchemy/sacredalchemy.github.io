@@ -1,8 +1,11 @@
 # 📌 Quick Start Checklist
 
+🌐 **Live Website:** https://sacredalchemy.github.io  
+📦 **GitHub Repo:** https://github.com/sacredalchemy/sacredalchemy.github.io
+
 ## ✅ What's Installed
 
-Your website now includes:
+Your website is now LIVE on GitHub Pages! Your website now includes:
 
 ### 1. **Booking System**
 - ✅ Full booking form with validation
