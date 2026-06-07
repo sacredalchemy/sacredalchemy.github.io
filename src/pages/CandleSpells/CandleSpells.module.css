@@ -177,3 +177,162 @@
 .cta:active {
   transform: scale(0.96);
 }
+
+.cta.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+}
+
+.cta.disabled:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Pricing Note */
+.pricingNote {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.15), rgba(249, 115, 22, 0.1));
+  border-left: 4px solid #fb923c;
+  border-radius: 0.75rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Categories Container */
+.categoriesContainer {
+  display: grid;
+  gap: 4rem;
+}
+
+/* Category Section */
+.categorySection {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.categoryHeader {
+  display: grid;
+  gap: 1rem;
+}
+
+.categoryTitle {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.categoryEmoji {
+  font-size: 1.8em;
+}
+
+.categoryDescription {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Benefits List */
+.benefitsList {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.benefitsList li {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Coming Soon Badge */
+.comingSoonBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.card.comingSoon {
+  opacity: 0.75;
+}
+
+.card.comingSoon:hover {
+  transform: none;
+}
+
+/* Price Info */
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.priceNote {
+  font-size: 0.8rem;
+  color: #fb923c;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page {
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  .categorySection {
+    gap: 2rem;
+  }
+
+  .categoriesContainer {
+    gap: 3rem;
+  }
+
+  .grid {
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pricingNote {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

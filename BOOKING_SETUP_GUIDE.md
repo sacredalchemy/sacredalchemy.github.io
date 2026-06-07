@@ -15,13 +15,13 @@ In the BookingModal component, replace the placeholder WhatsApp number with your
 
 ```javascript
 // CHANGE THIS:
-const whatsappNumber = '919515897027'; // Change to your WhatsApp number
+const whatsappNumber = '919951478032'; // Change to your WhatsApp number
 
 // TO THIS (your WhatsApp number with country code, no spaces or symbols):
 const whatsappNumber = '91XXXXXXXXXX'; // Your number here
 ```
 
-**Example:** If your number is +91 95158 97027, use: `919515897027`
+**Example:** If your number is +91 99514 78032, use: `919951478032`
 
 ---
 

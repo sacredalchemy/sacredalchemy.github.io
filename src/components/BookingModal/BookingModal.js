@@ -68,7 +68,7 @@ function BookingModal({ service, isOpen, onClose }) {
         `_Booking made via website_`;
 
       // WhatsApp API URL - Replace with your WhatsApp number
-      const whatsappNumber = '919515897027'; // Change to your WhatsApp number
+      const whatsappNumber = '919951478032'; // Change to your WhatsApp number
       const encodedMessage = encodeURIComponent(message);
       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 

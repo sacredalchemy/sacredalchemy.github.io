@@ -4,10 +4,10 @@
 
 ### 1. Update WhatsApp Number (CRITICAL)
 - [ ] Open `src/components/BookingModal/BookingModal.js`
-- [ ] Find line ~77: `const whatsappNumber = '919515897027';`
+- [ ] Find line ~77: `const whatsappNumber = '919951478032';`
 - [ ] Replace with your WhatsApp number format: `91XXXXXXXXXX`
 - [ ] Save the file
-- [ ] Example: +91 95158 97027 → `919515897027`
+- [ ] Example: +91 99514 78032 → `919951478032`
 
 ### 2. Test Booking Form (Desktop)
 - [ ] Start development server: `npm start`

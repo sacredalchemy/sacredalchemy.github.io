@@ -37,12 +37,12 @@ Your website is now LIVE on GitHub Pages! Your website now includes:
 
 **Line ~77:**
 ```javascript
-const whatsappNumber = '919515897027'; // ← CHANGE THIS TO YOUR NUMBER
+const whatsappNumber = '919951478032'; // ← CHANGE THIS TO YOUR NUMBER
 ```
 
 **Your WhatsApp number format:**
 - Country code + number (no + symbol, no spaces)
-- Example: India +91 95158 97027 → `919515897027`
+- Example: India +91 99514 78032 → `919951478032`
 
 ---
 

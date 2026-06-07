@@ -10,8 +10,8 @@
 
 const WHATSAPP_CONFIG = {
   // REQUIRED: Your WhatsApp business number (country code + number, no symbols)
-  // Example for India: +91 95158 97027 becomes 919515897027
-  phoneNumber: '919515897027', // ← CHANGE THIS TO YOUR NUMBER
+  // Example for India: +91 99514 78032 becomes 919951478032
+  phoneNumber: '919951478032', // ← CHANGE THIS TO YOUR NUMBER
   
   // Message template (auto-generated, do not modify)
   messageTemplate: (service, formData) => {
